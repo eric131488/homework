@@ -1,8 +1,8 @@
 package com.kotlin
 
 fun main(args: Array<String>) {
-    val box3 = Box3(23f, 14f, 13f)
-    val box5 = Box5(39.5f, 27.5f, 23f)
+    val box3 = Box3()
+    val box5 = Box5()
 
     val list = ArrayList<Box>()
     list.add(box3)
@@ -19,6 +19,7 @@ fun main(args: Array<String>) {
 
     for (box in list) {
         if (box.validate(length, width, height)) {
+            println(box.name)
             isMatch = true
 
             break

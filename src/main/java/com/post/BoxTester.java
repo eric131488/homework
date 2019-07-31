@@ -5,8 +5,8 @@ import java.util.Scanner;
 
 public class BoxTester {
     public static void main(String[] args) {
-        Box box3 = new Box3(23, 14, 13);
-        Box box5 = new Box5(39.5f, 27.5f, 23);
+        Box box3 = new Box3();
+        Box box5 = new Box5();
 
         ArrayList<Box> list = new ArrayList<>();
         list.add(box3);
@@ -24,6 +24,7 @@ public class BoxTester {
 
         for (Box box : list) {
             if  (box.validate(length, width, height)) {
+                System.out.println(box.name);
                 isMatchBox = true;
 
                 break;
